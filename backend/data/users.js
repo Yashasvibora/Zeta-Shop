@@ -17,7 +17,7 @@ const users= [
     {
         name: 'Random Mishra',
         email: 'rm@example.com',
-        password: bcrypt.hashSync('1234567', 10),
+        password: bcrypt.hashSync('1234567', 10),   
         zetaRewards: 2000,
     },
     {
