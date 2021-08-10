@@ -18,6 +18,10 @@ const userSchema = mongoose.Schema({
    isAdmin: {
       type: Boolean,
       required: false
+   },
+   zetaRewards: {
+      type: Number,
+      required: true
    }
 }, {
    timestamps: true
