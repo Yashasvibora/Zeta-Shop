@@ -18,7 +18,7 @@ const UserEditScreen = ({ match, history }) => {
 
 
   const dispatch = useDispatch()
-
+ 
   const userDetails = useSelector((state) => state.userDetails)
   const { loading, error, user } = userDetails
 

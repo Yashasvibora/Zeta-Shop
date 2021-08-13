@@ -17,7 +17,7 @@ const userSchema = mongoose.Schema({
    },
    isAdmin: {
       type: Boolean,
-      required: false
+      required: false 
    },
    zetaRewards: {
       type: Number,

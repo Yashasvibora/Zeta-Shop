@@ -11,7 +11,7 @@ const getProducts = asyncHandler(async (req, res) => {
   const keyword = req.query.z
     ? {
         zetaRewards: {
-          $lte: req.query.user.zetaRewards,
+          $lte: req.query.user.zetaRewards, 
         },
       }
     : {}

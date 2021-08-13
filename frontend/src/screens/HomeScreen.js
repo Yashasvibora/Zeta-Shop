@@ -16,7 +16,7 @@ const HomeScreen = ({ match }) => {
 
   const pageNumber = match.params.pageNumber || 1
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch() 
   
 
   const userDetails = useSelector((state) => state.userDetails)
