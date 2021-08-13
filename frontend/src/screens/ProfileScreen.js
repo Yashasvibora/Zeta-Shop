@@ -41,6 +41,7 @@ const ProfileScreen = ({ location, history }) => {
       } else {
         setName(user.name)
         setEmail(user.email)
+        setZetaRewards(user.zetaRewards)
       }
     }
   }, [dispatch, history, userInfo, user, success])
