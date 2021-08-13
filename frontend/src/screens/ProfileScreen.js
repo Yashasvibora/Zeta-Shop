@@ -11,6 +11,7 @@ import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [zetaRewards, setZetaRewards] =  useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [message, setMessage] = useState(null)
@@ -49,7 +50,7 @@ const ProfileScreen = ({ location, history }) => {
     if (password !== confirmPassword) {
       setMessage('Passwords do not match')
     } else {
-      dispatch(updateUserProfile({ id: user._id, name, email, password }))
+      dispatch(updateUserProfile({ id: user._id, name, email, password, zetaRewards }))
     }
   }
 
@@ -73,6 +74,16 @@ const ProfileScreen = ({ location, history }) => {
                 placeholder='Enter name'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='zetaRewards'>
+              <Form.Label>zetaRewards</Form.Label>
+              <Form.Control
+                type='zetaRewards'
+                placeholder='Enter zetaRewards'
+                value={zetaRewards}
+                onChange={(e) => setZetaRewards(e.target.value)}
               ></Form.Control>
             </Form.Group>
 

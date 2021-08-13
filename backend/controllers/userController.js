@@ -16,6 +16,7 @@ const authUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      zetaRewards: user.zetaRewards,
       token: generateToken(user._id),
     })
   } else {
@@ -28,7 +29,7 @@ const authUser = asyncHandler(async (req, res) => {
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password } = req.body
+  const { name, email, password, zetaRewards } = req.body
 
   const userExists = await User.findOne({ email })
 
@@ -69,6 +70,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      zetaRewards: user.zetaRewards,
     })
   } else {
     res.status(404)

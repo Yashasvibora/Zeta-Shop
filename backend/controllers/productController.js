@@ -8,11 +8,10 @@ const getProducts = asyncHandler(async (req, res) => {
   const pageSize = 10
   const page = Number(req.query.pageNumber) || 1
 
-  const keyword = req.query.keyword
+  const keyword = req.query.z
     ? {
-        name: {
-          $regex: req.query.keyword,
-          $options: 'i',
+        zetaRewards: {
+          $lte: req.query.user.zetaRewards,
         },
       }
     : {}
@@ -68,7 +67,7 @@ const createProduct = asyncHandler(async (req, res) => {
     countInStock: 0,
     numReviews: 0,
     description: 'Sample description',
-    zetaRewards: '0',
+    zetaRewards: 0,
   })
 
   const createdProduct = await product.save()
@@ -87,7 +86,6 @@ const updateProduct = asyncHandler(async (req, res) => {
     brand,
     category,
     countInStock,
-    zetaRewards,
   } = req.body
 
   const product = await Product.findById(req.params.id)
@@ -100,7 +98,6 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.brand = brand
     product.category = category
     product.countInStock = countInStock
-    product.zetaRewards = zetaRewards
 
     const updatedProduct = await product.save()
     res.json(updatedProduct)
