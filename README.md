@@ -27,9 +27,10 @@ This is basically a simple search engine which maps the products' and the custom
 
 
 Products can be viewed separately too, and you can review them, read their description and rate them.
+
 ![ProductScreen](https://user-images.githubusercontent.com/54465662/129516973-1f48f014-81c0-4336-bef7-970804bf2762.JPG)
 
-Customer can also check out his profile screen for order history and information related to the account.
+Customer can also check out his profile screen for order history and information related to the account and edit them.
 
 ![Profile Screen](https://user-images.githubusercontent.com/54465662/129515014-d62dfffa-4609-4b6d-8c36-2cb1976e5e9f.JPG)
 
